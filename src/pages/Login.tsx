@@ -1,19 +1,8 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-interface Inputs {
-  email: string;
-  password: string;
-}
-
 const Login = () => {
   const navigation = useNavigate();
-  const [error, setError] = useState("");
-  const [formData, setFormData] = useState<Inputs>({
-    email: "",
-    password: "",
-  });
 
   const {
     register,
