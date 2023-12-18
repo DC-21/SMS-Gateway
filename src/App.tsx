@@ -7,7 +7,7 @@ import Layout from "./components/Global/Layout";
 
 function App() {
   return (
-    <main className=" max-w-3xl mx-auto items-center justify-center flex flex-col w-full">
+    <main className=" max-w-7xl mx-auto items-center justify-center flex flex-col w-full">
       <Routes>
         <Route
           path="/"
