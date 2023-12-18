@@ -7,18 +7,20 @@ import Layout from "./components/Global/Layout";
 
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Layout>
-            <Dashboard />
-          </Layout>
-        }
-      />
-      <Route path="/login" Component={Login} />
-      <Route path="/register" Component={Register} />
-    </Routes>
+    <main className=" max-w-3xl mx-auto items-center justify-center flex flex-col w-full">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Dashboard />
+            </Layout>
+          }
+        />
+        <Route path="/login" Component={Login} />
+        <Route path="/register" Component={Register} />
+      </Routes>
+    </main>
   );
 }
 
