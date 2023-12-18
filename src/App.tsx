@@ -16,7 +16,6 @@ function App() {
           </Layout>
         }
       />
-
       <Route path="/login" Component={Login} />
       <Route path="/register" Component={Register} />
     </Routes>
