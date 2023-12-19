@@ -100,7 +100,7 @@ const SideBar = () => {
 
 export default SideBar;
 
-const Navlinks = [
+export const Navlinks = [
   {
     link: "/dashboard",
     name: "Home",
