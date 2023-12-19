@@ -10,7 +10,7 @@ const SideBar = () => {
   };
   return (
     <nav
-      className={`flex flex-col gap-4 pt-4 items-start shadow-md ${
+      className={`md:flex hidden flex-col gap-4 pt-4 items-start shadow-md ${
         open ? "w-[160px]" : "w-14"
       }  duration-300 px-1 md:px-2 h-screen md:text-base text-sm bg-slate-900 justify-between text-white`}
     >

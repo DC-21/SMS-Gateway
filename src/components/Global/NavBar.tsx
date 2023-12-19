@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="flex items-center w-full justify-between gap-8 py-4 shadow-md px-4">
+    <nav className="flex items-center w-full justify-between gap-8 py-4 shadow-md px-4 relative">
       <Link to={"/"} className=" font-bold flex items-center gap-2">
         SMS
         <svg
@@ -51,7 +51,8 @@ const NavBar = () => {
           />
         </svg>
       </div>
-    </div>
+      <nav className="md:hidden absolute w-full top-[100%] inset-x-0 h-screen bg-slate-900"></nav>
+    </nav>
   );
 };
 
