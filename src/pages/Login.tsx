@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import bg from "../assets/bg.png";
 
 const Login = () => {
   const navigation = useNavigate();
@@ -18,7 +19,10 @@ const Login = () => {
     navigation("/dashboard");
   };
   return (
-    <section className=" min-h-screen w-full flex items-center justify-center px-4">
+    <section
+      style={{ backgroundImage: `url(${bg})` }}
+      className=" min-h-screen bg-cover bg-center bg-no-repeat w-full flex items-center justify-center px-4"
+    >
       <form
         onSubmit={handleSubmit(userLogin)}
         className=" border shadow-md bg-white p-2 md:p-4 flex flex-col gap-4 rounded-xl max-w-md w-full"
@@ -67,7 +71,7 @@ const Login = () => {
             <button
               type="button"
               onClick={() => setShowPass(!showPass)}
-              className=" px-2"
+              className=" px-2 hover:text-blue-500 duration-300"
             >
               {showPass ? (
                 <svg
