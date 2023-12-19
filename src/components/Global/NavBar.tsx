@@ -8,6 +8,7 @@ const NavBar = () => {
 
   const handleNavLinkClick = (index: number) => {
     setActiveIndex(index);
+    setOpen(false);
   };
   return (
     <nav className="flex items-center w-full justify-between gap-8 py-4 shadow-md px-4 relative">
@@ -77,26 +78,22 @@ const NavBar = () => {
           open ? "left-0" : "-left-full"
         } w-full flex top-[100%] inset-x-0 h-screen duration-300`}
       >
-        <div className="bg-slate-900 w-2/3 flex flex-col shadow-lg">
-          {Navlinks.map((item, i) => (
-            <NavLink
-              onClick={() => handleNavLinkClick(i)}
-              key={i}
-              to={item.link}
-              className={`flex items-center gap-2 p-2 hover:bg-slate-800 rounded-md delay-75 duration-200 ${
-                activeIndex === i ? "bg-slate-700" : ""
-              }`}
-            >
-              <span>{item.icon}</span>
-              <span
-                className={`${
-                  open ? "scale-100" : "scale-0"
-                } duration-300 origin-left`}
+        <div className="bg-slate-900 text-white w-2/3 shadow-lg">
+          <div className=" my-8  gap-2 flex flex-col">
+            {Navlinks.map((item, i) => (
+              <NavLink
+                onClick={() => handleNavLinkClick(i)}
+                key={i}
+                to={item.link}
+                className={`flex items-center gap-2 p-2 hover:bg-slate-800 rounded-md mx-2 delay-75 duration-200 ${
+                  activeIndex === i ? "bg-slate-700" : ""
+                }`}
               >
-                {item.name}
-              </span>
-            </NavLink>
-          ))}
+                <span>{item.icon}</span>
+                <span>{item.name}</span>
+              </NavLink>
+            ))}
+          </div>
         </div>
         <button
           onClick={() => setOpen(false)}
