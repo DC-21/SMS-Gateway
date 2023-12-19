@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <nav className="flex items-center w-full justify-between gap-8 py-4 shadow-md px-4 relative">
       <Link to={"/"} className=" font-bold flex items-center gap-2">
@@ -50,10 +52,19 @@ const NavBar = () => {
             d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
           />
         </svg>
+
+        <button onClick={() => setOpen(!open)} className="flex flex-col gap-2">
+          <div className={`w-6 rounded-full h-1 bg-slate-900`}></div>
+          <div className={`w-6 rounded-full h-1 bg-slate-900`}></div>
+        </button>
       </div>
-      <nav className="md:hidden absolute w-full flex top-[100%] inset-x-0 h-screen">
-        <div className="bg-slate-900 w-2/3"></div>
-        <div className=" flex-1 backdrop-blur-[1px]"></div>
+      <nav
+        className={`md:hidden absolute ${
+          open ? "right-0" : "-right-full"
+        } w-full flex top-[100%] inset-x-0 h-screen`}
+      >
+        <div className="bg-slate-900 w-2/3 shadow-lg"></div>
+        <button className=" flex-1 backdrop-blur-[2px]"></button>
       </nav>
     </nav>
   );
