@@ -14,9 +14,10 @@ const Register = () => {
     watch,
   } = useForm();
 
-  const userLogin = async (data: any) => {
+  const userRegister = async (data: any) => {
     console.log(data.email);
     console.log(data.password);
+    console.log(data.name);
     navigation("/dashboard");
   };
   return (
@@ -25,7 +26,7 @@ const Register = () => {
       className=" min-h-screen bg-cover bg-center bg-no-repeat w-full flex items-center justify-center px-4"
     >
       <form
-        onSubmit={handleSubmit(userLogin)}
+        onSubmit={handleSubmit(userRegister)}
         className=" border shadow-md bg-white p-2 md:p-4 flex flex-col gap-4 rounded-xl max-w-md w-full"
       >
         <h1 className=" font-bold text-2xl text-blue-900">Register</h1>
