@@ -208,10 +208,7 @@ const Register = () => {
           Register
         </button>
 
-        <Link
-          to={"/register"}
-          className=" text-center gap-2 flex justify-center"
-        >
+        <Link to={"/"} className=" text-center gap-2 flex justify-center">
           <span>Already have an account?</span>
           <span className=" text-blue-800 hover:underline hover:text-blue-500 duration-300">
             Login
