@@ -118,7 +118,7 @@ const Login = () => {
             </span>
           )}
         </div>
-        <button className=" p-2 rounded-md active:scale-[98%] duration-200 font-bold text-center bg-blue-600 text-white">
+        <button className=" p-2 rounded-md active:scale-[98%] duration-200 font-bold text-center bg-blue-600 hover:bg-blue-900 text-white">
           Login
         </button>
 
@@ -127,7 +127,9 @@ const Login = () => {
           className=" text-center gap-2 flex justify-center"
         >
           <span>Don't have an account?</span>
-          <span className=" text-blue-800">Register</span>
+          <span className=" text-blue-800 hover:underline hover:text-blue-500 duration-300">
+            Register
+          </span>
         </Link>
       </form>
     </section>
