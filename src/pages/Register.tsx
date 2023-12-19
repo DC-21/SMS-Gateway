@@ -29,7 +29,9 @@ const Register = () => {
         onSubmit={handleSubmit(userRegister)}
         className=" border shadow-md bg-white p-2 md:p-4 flex flex-col gap-4 rounded-xl max-w-md w-full"
       >
-        <h1 className=" font-bold text-2xl text-blue-900">Register</h1>
+        <h1 className=" font-bold text-2xl text-blue-900 text-center">
+          Register
+        </h1>
         <div className="flex flex-col gap-1">
           <input
             type="text"
