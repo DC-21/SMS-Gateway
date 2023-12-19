@@ -53,7 +53,7 @@ const NavBar = () => {
       </div>
       <nav className="md:hidden absolute w-full flex top-[100%] inset-x-0 h-screen">
         <div className="bg-slate-900 w-2/3"></div>
-        <div className=" flex-1 backdrop-blur-sm"></div>
+        <div className=" flex-1 backdrop-blur-[1px]"></div>
       </nav>
     </nav>
   );

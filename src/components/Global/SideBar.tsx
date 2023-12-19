@@ -12,7 +12,7 @@ const SideBar = () => {
     <nav
       className={`md:flex hidden flex-col gap-4 pt-4 items-start shadow-md ${
         open ? "w-[160px]" : "w-14"
-      }  duration-300 px-1 md:px-2 h-screen md:text-base text-sm bg-slate-900 justify-between text-white`}
+      }  duration-300 px-1 md:px-2 h-screen md:text-base text-sm bg-slate-900 text-white`}
     >
       <div className=" w-full flex flex-col gap-4">
         <button
@@ -71,7 +71,7 @@ const SideBar = () => {
           </NavLink>
         ))}
       </div>
-      <button className="flex items-center hover:text-red-400 gap-2 p-2">
+      <button className="flex items-center hover:text-red-400 mt-36 gap-2 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
