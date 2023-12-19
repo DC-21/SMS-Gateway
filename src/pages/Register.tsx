@@ -139,16 +139,16 @@ const Register = () => {
           )}
         </div>
         <button className=" p-2 rounded-md active:scale-[98%] duration-200 font-bold text-center bg-blue-600 hover:bg-blue-900 text-white">
-          Login
+          Register
         </button>
 
         <Link
           to={"/register"}
           className=" text-center gap-2 flex justify-center"
         >
-          <span>Don't have an account?</span>
+          <span>Already have an account?</span>
           <span className=" text-blue-800 hover:underline hover:text-blue-500 duration-300">
-            Register
+            Login
           </span>
         </Link>
       </form>
