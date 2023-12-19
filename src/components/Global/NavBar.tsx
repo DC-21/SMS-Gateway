@@ -54,8 +54,16 @@ const NavBar = () => {
         </svg>
 
         <button onClick={() => setOpen(!open)} className="flex flex-col gap-2">
-          <div className={`w-6 rounded-full h-1 bg-slate-900`}></div>
-          <div className={`w-6 rounded-full h-1 bg-slate-900`}></div>
+          <div
+            className={`w-6 rounded-full h-1 ${
+              open ? "rotate-45 translate-y-[0.38rem]" : ""
+            } bg-slate-900 duration-300 delay-200`}
+          ></div>
+          <div
+            className={`w-6 rounded-full h-1 ${
+              open ? "-rotate-45 -translate-y-[0.38rem]" : ""
+            } bg-slate-900 duration-300 delay-200`}
+          ></div>
         </button>
       </div>
       <nav
