@@ -51,7 +51,10 @@ const NavBar = () => {
           />
         </svg>
       </div>
-      <nav className="md:hidden absolute w-full top-[100%] inset-x-0 h-screen bg-slate-900"></nav>
+      <nav className="md:hidden absolute w-full flex top-[100%] inset-x-0 h-screen">
+        <div className="bg-slate-900 w-2/3"></div>
+        <div className=" flex-1 backdrop-blur-sm"></div>
+      </nav>
     </nav>
   );
 };
