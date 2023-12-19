@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigation = useNavigate();
@@ -13,7 +13,7 @@ const Login = () => {
   const userLogin = async (data: any) => {
     console.log(data.email);
     console.log(data.password);
-    navigation("/");
+    navigation("/dashboard");
   };
   return (
     <section className=" min-h-screen w-full flex items-center justify-center px-4">
@@ -70,6 +70,14 @@ const Login = () => {
         <button className=" p-2 rounded-md active:scale-[98%] duration-200 font-bold text-center bg-blue-600 text-white">
           Login
         </button>
+
+        <Link
+          to={"/register"}
+          className=" text-center gap-2 flex justify-center"
+        >
+          <span>Don't have an account?</span>
+          <span className=" text-blue-800">Login</span>
+        </Link>
       </form>
     </section>
   );

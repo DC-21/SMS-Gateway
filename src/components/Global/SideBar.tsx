@@ -102,7 +102,7 @@ export default SideBar;
 
 const Navlinks = [
   {
-    link: "/",
+    link: "/dashboard",
     name: "Home",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" height="1.5em" width="1.5em">
