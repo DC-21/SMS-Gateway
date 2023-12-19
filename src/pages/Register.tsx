@@ -6,6 +6,7 @@ import bg from "../assets/bg.png";
 const Register = () => {
   const navigation = useNavigate();
   const [showPass, setShowPass] = useState<boolean>(false);
+  const [showConfirmPass, setShowConfirmPass] = useState<boolean>(false);
 
   const {
     register,
@@ -146,7 +147,7 @@ const Register = () => {
         <div className="flex flex-col gap-1">
           <div className=" border rounded-md items-center flex w-full">
             <input
-              type={showPass ? "text" : "password"}
+              type={showConfirmPass ? "text" : "password"}
               className="p-2 focus:outline-none flex-1 bg-gray-200"
               placeholder="Confirm Password"
               {...register("confirmPassword", {
@@ -158,7 +159,7 @@ const Register = () => {
             />
             <button
               type="button"
-              onClick={() => setShowPass(!showPass)}
+              onClick={() => setShowConfirmPass(!showConfirmPass)}
               className=" px-2 hover:text-blue-500 duration-300"
             >
               {showPass ? (
