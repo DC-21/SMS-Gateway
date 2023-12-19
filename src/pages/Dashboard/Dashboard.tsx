@@ -62,7 +62,7 @@ const Dashboard = () => {
             </svg>
             Pending SMS
           </div>
-          <span className=" text-4xl font-bold text-blue-500">12</span>
+          <span className="text-4xl font-bold text-blue-500">12</span>
         </div>
         <div className="w-full flex flex-col gap-2 items-center justify-center border border-slate-300 shadow-md py-6 px-2 rounded">
           <div className=" flex items-center gap-2">
@@ -72,7 +72,7 @@ const Dashboard = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 text-blue-700"
             >
               <path
                 strokeLinecap="round"
