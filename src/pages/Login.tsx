@@ -21,7 +21,7 @@ const Login = () => {
   return (
     <section
       style={{ backgroundImage: `url(${bg})` }}
-      className=" min-h-screen bg-cover bg-center bg-no-repeat w-full flex items-center justify-center px-4"
+      className=" min-h-screen bg-cover bg-center bg-no-repeat bg-fixed w-full flex items-center justify-center px-4"
     >
       <form
         onSubmit={handleSubmit(userLogin)}
