@@ -1,8 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Navlinks } from "./SideBar";
 
 const NavBar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
+
+  const handleNavLinkClick = (index: number) => {
+    setActiveIndex(index);
+  };
   return (
     <nav className="flex items-center w-full justify-between gap-8 py-4 shadow-md px-4 relative">
       <Link to={"/"} className=" font-bold flex items-center gap-2">
@@ -71,7 +77,27 @@ const NavBar = () => {
           open ? "left-0" : "-left-full"
         } w-full flex top-[100%] inset-x-0 h-screen duration-300`}
       >
-        <div className="bg-slate-900 w-2/3 shadow-lg"></div>
+        <div className="bg-slate-900 w-2/3 flex flex-col shadow-lg">
+          {Navlinks.map((item, i) => (
+            <NavLink
+              onClick={() => handleNavLinkClick(i)}
+              key={i}
+              to={item.link}
+              className={`flex items-center gap-2 p-2 hover:bg-slate-800 rounded-md delay-75 duration-200 ${
+                activeIndex === i ? "bg-slate-700" : ""
+              }`}
+            >
+              <span>{item.icon}</span>
+              <span
+                className={`${
+                  open ? "scale-100" : "scale-0"
+                } duration-300 origin-left`}
+              >
+                {item.name}
+              </span>
+            </NavLink>
+          ))}
+        </div>
         <button
           onClick={() => setOpen(false)}
           className=" flex-1 backdrop-blur-[2px]"
