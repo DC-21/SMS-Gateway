@@ -12,7 +12,7 @@ function App() {
     <main className=" max-w-7xl mx-auto items-center justify-center flex flex-col w-full">
       <Routes>
         <Route
-          path="/"
+          path="/dashboard"
           element={
             <Layout>
               <Dashboard />
