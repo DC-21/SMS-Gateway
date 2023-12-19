@@ -12,7 +12,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <NavBar />
       <div className="flex">
         <SideBar />
-        <main>{children}</main>
+        <main className="w-full">{children}</main>
       </div>
     </div>
   );

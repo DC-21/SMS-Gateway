@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Layout from "./components/Global/Layout";
+import Sms from "./pages/Sms/Sms";
+import Subscriptions from "./pages/Subscriptions/Subscriptions";
 
 function App() {
   return (
@@ -14,6 +16,22 @@ function App() {
           element={
             <Layout>
               <Dashboard />
+            </Layout>
+          }
+        />
+        <Route
+          path="/sms"
+          element={
+            <Layout>
+              <Sms />
+            </Layout>
+          }
+        />
+        <Route
+          path="/subscriptions"
+          element={
+            <Layout>
+              <Subscriptions />
             </Layout>
           }
         />
