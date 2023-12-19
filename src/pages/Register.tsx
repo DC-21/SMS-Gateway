@@ -162,7 +162,7 @@ const Register = () => {
               onClick={() => setShowConfirmPass(!showConfirmPass)}
               className=" px-2 hover:text-blue-500 duration-300"
             >
-              {showPass ? (
+              {showConfirmPass ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
