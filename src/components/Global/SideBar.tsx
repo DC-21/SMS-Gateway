@@ -11,7 +11,7 @@ const SideBar = () => {
   return (
     <nav
       className={`flex flex-col gap-4 pt-4 items-start shadow-md ${
-        open ? "md:w-[160px] w-28" : " md:w-14 w-12"
+        open ? "w-[160px]" : "w-14"
       }  duration-300 px-1 md:px-2 h-screen md:text-base text-sm bg-slate-900 justify-between text-white`}
     >
       <div className=" w-full flex flex-col gap-4">
