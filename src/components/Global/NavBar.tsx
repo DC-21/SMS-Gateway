@@ -72,7 +72,10 @@ const NavBar = () => {
         } w-full flex top-[100%] inset-x-0 h-screen duration-300`}
       >
         <div className="bg-slate-900 w-2/3 shadow-lg"></div>
-        <button className=" flex-1 backdrop-blur-[2px]"></button>
+        <button
+          onClick={() => setOpen(false)}
+          className=" flex-1 backdrop-blur-[2px]"
+        ></button>
       </nav>
     </nav>
   );
